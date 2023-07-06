@@ -1,0 +1,111 @@
+/* koment celeho riadku ctrl k u */
+
+:root{
+    --back: hsl(26, 40%, 92%);
+    --grey: hsl(0, 0%, 55%);
+    --green: hsl(158, 36%, 37%);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat_semibold;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: Abril_Fatface;
+    src:url(fonts/AbrilFatface-Regular.ttf);
+}
+
+*{ /*na všetko to dá, aj na text a všetko*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--back);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product_container{
+    display: flex;
+    width: 790px;
+    height: 573px;
+    
+    background-color: white;
+    border-radius: 15px;
+}
+.product_picture{
+    width: 419px; /*height som nemusel pridať, pretože sa to fixne na container*/
+}
+
+/*product_info_items*/
+.product_info_container{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product_brand{
+    color: var(--grey);
+    font-family: Montserrat;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.product_name{
+    font-family: Abril_Fatface;
+    letter-spacing: 3px;
+    font-weight: normal;
+    line-height: 2.7rem;
+    font-size: 43px;
+}
+.product_description{
+    color: var(--grey);
+    font-family: Montserrat;
+    font-size: 20px;
+}
+.price{
+    color: var(--green);
+    font-family: Abril_Fatface;
+    letter-spacing: 1px;
+    font-weight: normal; /*thickness or boldness of font*/
+    display: inline-block;
+    font-size: 36px;
+}
+.old_price{
+    color: var(--grey);
+    text-decoration: line-through;
+    font-family: Montserrat;
+    font-size: small;
+    display: inline-block;
+    font-size: 16px;
+
+    margin-left: 10px; /*fixnut lepšie, ešte aby bol v strede*/
+}
+.add_to_cart{
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 270px;
+    height: 54px;
+    font-family: Montserrat_semibold;
+    font-size: 16px;
+
+    display: block;
+}
+#icon_shopping_cart{
+    margin-right: 10px; /*fixnut lepšie*/
+}
+.add_to_cart:hover{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 32%);
+}
